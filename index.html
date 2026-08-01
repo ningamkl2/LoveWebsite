@@ -1,11 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>For My Thumpinu ❤️</title>
-</head>
-<body style="font-family:Georgia,serif; background:#fff8f8; color:#444; max-width:700px; margin:60px auto; line-height:1.8; padding:20px;">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Thumpinu ❤️</title>
 
-<h2 style="text-align:center; color:#e91e63;">For My Thumpinu ❤️</h2>
+<style>
+body{
+margin:0;
+font-family:Georgia,serif;
+background:linear-gradient(135deg,#ffd6e7,#fff5f8);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 35px rgba(0,0,0,.15);
+max-width:700px;
+width:90%;
+text-align:center;
+animation:fade 1s;
+}
+
+h1{
+color:#e91e63;
+margin-top:0;
+}
+
+button{
+background:#ff4f8b;
+color:white;
+border:none;
+padding:15px 35px;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+margin-top:20px;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+background:#e91e63;
+}
+
+#poem{
+display:none;
+text-align:left;
+font-size:22px;
+line-height:1.8;
+margin-top:20px;
+animation:fade 1s;
+}
+
+.end{
+text-align:center;
+font-size:28px;
+color:#e91e63;
+margin-top:30px;
+font-weight:bold;
+}
+
+.heart{
+position:fixed;
+bottom:-20px;
+color:#ff4f8b;
+animation:float 8s linear infinite;
+font-size:20px;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+100%{transform:translateY(-110vh);}
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Happy Girlfriend's Day ❤️</h1>
+
+<h2>For My Thumpinu ❤️</h2>
+
+<p>
+Every heartbeat of mine whispers your name.<br>
+I have something written only for you...
+</p>
+
+<button onclick="showPoem()">Tap Me ❤️</button>
+
+<div id="poem">
 
 <p>
 Wishes may bloom or wither —<br>
@@ -24,6 +121,33 @@ My love, my peace ❤️<br>
 That's all I wish for—<br>
 My sweetest being ❤️
 </p>
+
+<div class="end">
+Forever Yours ❤️
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function showPoem(){
+document.querySelector("button").style.display="none";
+document.getElementById("poem").style.display="block";
+}
+
+for(let i=0;i<30;i++){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDelay=Math.random()*8+"s";
+h.style.fontSize=(18+Math.random()*20)+"px";
+document.body.appendChild(h);
+}
+
+</script>
 
 </body>
 </html>
