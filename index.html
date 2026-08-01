@@ -84,6 +84,21 @@ font-size:20px;
 from{opacity:0;transform:translateY(20px);}
 to{opacity:1;transform:translateY(0);}
 }
+.poem-container{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.poem-text{
+    flex:1;
+}
+
+.poem-image img{
+    width:220px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
 </style>
 </head>
 
@@ -103,6 +118,8 @@ I have something written only for you...
 <button onclick="showPoem()">Tap Me ❤️</button>
 
 <div id="poem">
+<div class="poem-container">
+<div class="poem-text">
 
 <p>
 Wishes may bloom or wither —<br>
